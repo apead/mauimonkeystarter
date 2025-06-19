@@ -26,17 +26,20 @@ public partial class ListOfMonkeysPage : ContentPage
         //MonkeysCollectionView.ItemsSource = Monkeys;
         BindingContext = this;
 
+        MonkeysCollectionView.SelectedItem = null;
     }
+
+ 
 
     private async void MonkeysCollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-        Monkey myMonkey =  e.CurrentSelection[0] as Monkey;
+        Monkey myMonkey = MonkeysCollectionView.SelectedItem as Monkey; //e.CurrentSelection[0] as Monkey;
 
         if (myMonkey != null)
         {
             await Navigation.PushAsync(new SingleMonkeyPage(myMonkey));
         }
 
-
+      
     }
 }

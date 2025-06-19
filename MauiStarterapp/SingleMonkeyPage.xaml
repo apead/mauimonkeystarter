@@ -4,12 +4,49 @@
              x:Class="MauiStarterapp.SingleMonkeyPage"
              xmlns:models="clr-namespace:MauiStarterapp.Models"
              Title="{Binding Name}" x:DataType="models:Monkey">
-    <VerticalStackLayout>
+    <ScrollView>
+    <VerticalStackLayout Margin="20,0,20,20" Spacing="8">
+
+            <Border>
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20"/>
+                </Border.StrokeShape>
         <Image Source="{Binding Image}"/>
-        <Label Text="{Binding Details}"/>
-        <Label Text="{Binding Location}"/>
-        <Label Text="{Binding Longitude}"/>
-        <Label Text="{Binding Latitude}"/>
-        <Label Text="{Binding Population}"/>
+            </Border>
+            <Label Text="{Binding Details}"/>
+           
+            <Border StrokeThickness="2">
+          
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20" />
+            </Border.StrokeShape>
+            <VerticalStackLayout Margin="5" Spacing="5">    
+        <Label Text="{Binding Location, StringFormat='Located in {0}'}" FontAttributes="Bold" HorizontalOptions="Center"/>
+       
+            <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+        <Label Text="Longitude" FontAttributes="Bold" HorizontalOptions="Center"/>
+        <Label Grid.Row="1"  Text="{Binding Longitude, StringFormat='{0:F2}'}" HorizontalOptions="Center"/>
+                    <Label Grid.Column="1" Text="Latitude" FontAttributes="Bold" HorizontalOptions="Center"/>
+                    <Label Grid.Column="1" Grid.Row="1" Text="{Binding Latitude, StringFormat='{0:F2}'}" HorizontalOptions="Center"/>
+
+                    <Label Grid.Column="2" Text="Population:" FontAttributes="Bold" HorizontalOptions="Center"/>
+                    <Label Grid.Column="2" Grid.Row="1" Text="{Binding Population}" HorizontalOptions="Center"/>
+        </Grid>
+            </VerticalStackLayout>
+        </Border>
+
+        
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

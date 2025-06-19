@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:MauiStarterapp.Models"
+             x:Class="MauiStarterapp.ListOfMonkeysPage"
+             Title="ListOfMonkeysPage">
+    <VerticalStackLayout>
+        <CollectionView x:Name="MonkeysCollectionView" ItemsSource="{Binding Monkeys}" ItemsLayout="VerticalGrid,1">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Monkey">
+                    <Grid Padding="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Image Source="{Binding Image}" HeightRequest="80" Grid.RowSpan="2"/>
+                        <Label Text="{Binding Name}" Grid.Column="1" Margin="5,0,5,5" FontSize="Medium" FontAttributes="Bold"/>
+                        <Label Text="{Binding Location}" Grid.Column="1" Grid.Row="1" Margin="5" FontSize="18"/>
+
+                    </Grid>
+                   
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

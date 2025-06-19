@@ -35,7 +35,8 @@ namespace MauiStarterapp.Services
             using var stream = await FileSystem.OpenAppPackageFileAsync("monkeys.json");
             using var reader = new StreamReader(stream);
             var contents = await reader.ReadToEndAsync();
-            _monkeyList = JsonSerializer.Deserialize(contents, MonkeyContext.Default.ListMonkey); return _monkeyList;
+            _monkeyList = JsonSerializer.Deserialize(contents, MonkeyContext.Default.ListMonkey); 
+            return _monkeyList;
         }
     }
 }

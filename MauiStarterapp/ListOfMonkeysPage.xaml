@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:MauiStarterapp.Models"
              x:Class="MauiStarterapp.ListOfMonkeysPage"
-             Title="ListOfMonkeysPage">
+             Title="Monkey List">
     <VerticalStackLayout>
-        <CollectionView x:Name="MonkeysCollectionView" ItemsSource="{Binding Monkeys}" ItemsLayout="VerticalGrid,1">
+        <CollectionView x:Name="MonkeysCollectionView" ItemsSource="{Binding Monkeys}" ItemsLayout="VerticalGrid,1" SelectionChanged="MonkeysCollectionView_SelectionChanged" SelectionMode="Single">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:Monkey">
                     <Grid Padding="5">

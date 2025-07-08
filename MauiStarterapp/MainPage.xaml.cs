@@ -11,7 +11,7 @@
        
         private async void DisplayMonkeysButton_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ListOfMonkeysPage());
+          //  await Navigation.PushAsync(new ListOfMonkeysPage());
         //  this
         
         }

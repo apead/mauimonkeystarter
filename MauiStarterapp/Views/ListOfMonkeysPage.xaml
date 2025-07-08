@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:MauiStarterapp.Models"
-             x:Class="MauiStarterapp.ListOfMonkeysPage"
-             Title="Monkey List">
+             xmlns:viewmodels="clr-namespace:MauiStarterapp.ViewModels"
+             x:Class="MauiStarterapp.Views.ListOfMonkeysPage"
+             Title="Monkey List" x:DataType="viewmodels:ListOfMonkeysViewModel">
    
     <VerticalStackLayout>
         <CollectionView x:Name="MonkeysCollectionView" ItemsSource="{Binding Monkeys}" ItemsLayout="VerticalGrid,1" SelectionChanged="MonkeysCollectionView_SelectionChanged" SelectionMode="Single">

@@ -3,12 +3,12 @@
     x:Class="MauiStarterapp.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MauiStarterapp"
+    xmlns:views="clr-namespace:MauiStarterapp.Views"
     Title="MauiStarterapp">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        ContentTemplate="{DataTemplate views:ListOfMonkeysPage}"
+        Route="ListOfMonkeysPage" />
 
 </Shell>

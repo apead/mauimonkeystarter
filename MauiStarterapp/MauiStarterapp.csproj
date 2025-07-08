@@ -65,10 +65,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="ListOfMonkeysPage.xaml">
+	  <MauiXaml Update="Views\ListOfMonkeysPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="SingleMonkeyPage.xaml">
+	  <MauiXaml Update="Views\SingleMonkeyPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

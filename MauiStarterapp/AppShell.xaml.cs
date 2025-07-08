@@ -1,12 +1,20 @@
-﻿namespace MauiStarterapp
+﻿
+using MauiStarterapp.Views;
+
+namespace MauiStarterapp
 {
     public partial class AppShell : Shell
     {
         public AppShell()
         {
             InitializeComponent();
+
+            RegisterRoutes();
         }
 
-       
+        private void RegisterRoutes()
+        {
+            Routing.RegisterRoute(nameof(SingleMonkeyPage), typeof(SingleMonkeyPage));
+        }
     }
 }

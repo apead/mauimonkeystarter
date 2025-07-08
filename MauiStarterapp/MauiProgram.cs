@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿
+using MauiStarterapp.Services;
+using MauiStarterapp.ViewModels;
+using Microsoft.Extensions.Logging;
 
 namespace MauiStarterapp
 {
@@ -18,6 +21,12 @@ namespace MauiStarterapp
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+            builder.Services.AddTransient<Views.SingleMonkeyPage>();
+            builder.Services.AddSingleton<SingleMonkeyViewModel>();
+
+            builder.Services.AddTransient<Views.ListOfMonkeysPage>();
+            builder.Services.AddSingleton<ListOfMonkeysViewModel>();
+            builder.Services.AddSingleton<MonkeyService>();
 
             return builder.Build();
         }

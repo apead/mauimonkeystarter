@@ -1,5 +1,6 @@
 using MauiStarterapp.Models;
 using MauiStarterapp.Services;
+using System.Linq;
 
 namespace MauiStarterapp;
 
@@ -22,7 +23,10 @@ public partial class ListOfMonkeysPage : ContentPage
 
         MonkeyService monkeyService = new MonkeyService();
 
-        Monkeys = await monkeyService.GetLocalMonkeys();
+        var monkeys = await monkeyService.GetLocalMonkeys();
+
+        Monkeys = monkeys.Where(x => x.Name.StartsWith("S")).ToList();
+        
         //MonkeysCollectionView.ItemsSource = Monkeys;
         BindingContext = this;
 

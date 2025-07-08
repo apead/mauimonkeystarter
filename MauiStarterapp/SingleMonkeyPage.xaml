@@ -6,7 +6,7 @@
              Title="{Binding Name}" x:DataType="models:Monkey">
     <ScrollView>
     <VerticalStackLayout Margin="20,0,20,20" Spacing="8">
-
+           
             <Border>
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="20"/>

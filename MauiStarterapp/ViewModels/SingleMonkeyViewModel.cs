@@ -1,4 +1,5 @@
-﻿using MauiStarterapp.Models;
+﻿using Java.Time;
+using MauiStarterapp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace MauiStarterapp.ViewModels
 {
+    [QueryProperty(nameof(Monkey), "Monkey")]
     public class SingleMonkeyViewModel : BaseViewModel
     {
 

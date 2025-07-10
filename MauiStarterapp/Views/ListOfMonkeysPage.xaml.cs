@@ -29,7 +29,7 @@ public partial class ListOfMonkeysPage : ContentPage
 
  
 
-    private async void MonkeysCollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    /*private async void MonkeysCollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
       /*  Monkey myMonkey = MonkeysCollectionView.SelectedItem as Monkey; //e.CurrentSelection[0] as Monkey;
 
@@ -37,7 +37,7 @@ public partial class ListOfMonkeysPage : ContentPage
         {
             await Navigation.PushAsync(new SingleMonkeyPage(myMonkey));
         }
-      */
       
-    }
+      
+    }*/
 }

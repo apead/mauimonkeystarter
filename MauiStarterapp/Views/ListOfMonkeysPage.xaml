@@ -7,7 +7,7 @@
              Title="Monkey List" x:DataType="viewmodels:ListOfMonkeysViewModel">
    
     <VerticalStackLayout>
-        <CollectionView x:Name="MonkeysCollectionView" ItemsSource="{Binding Monkeys}" ItemsLayout="VerticalGrid,1" SelectionChanged="MonkeysCollectionView_SelectionChanged" SelectionMode="Single">
+        <CollectionView x:Name="MonkeysCollectionView" SelectedItem="{Binding CurrentSelectedMonkey}" SelectionChangedCommand="{Binding MonkeySelectionChangedCommand}" ItemsSource="{Binding Monkeys}" ItemsLayout="VerticalGrid,1"  SelectionMode="Single">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:Monkey">
                     <Grid Padding="5">

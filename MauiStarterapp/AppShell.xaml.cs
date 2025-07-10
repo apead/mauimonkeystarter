@@ -14,7 +14,7 @@ namespace MauiStarterapp
 
         private void RegisterRoutes()
         {
-            Routing.RegisterRoute(nameof(SingleMonkeyPage), typeof(SingleMonkeyPage));
+            Routing.RegisterRoute("monkeypage", typeof(SingleMonkeyPage));
         }
     }
 }
